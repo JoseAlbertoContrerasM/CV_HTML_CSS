@@ -23,7 +23,6 @@ body {
     border-bottom: 2px solid #007bff; 
   }
   
-  /* Estilos para el header con la foto */
   .header-content {
     display: flex; 
     align-items: center; 
@@ -35,10 +34,12 @@ body {
   }
   
   .profile-pic {
-    width: 100px; 
-    height: 100px; 
+    width: 120px; 
+    height: 180px; 
     object-fit: cover; 
-    border-radius: 50%; 
+    border-radius: 0px; 
+    padding-right: 50px;
+
   }
   
   .name {
@@ -72,7 +73,7 @@ body {
   }
   
   .skills h2, .languages h2 {
-    color: #007bff; 
+    color: black; 
     margin-bottom: 15px; 
   }
   
@@ -100,28 +101,28 @@ body {
     text-align: center; 
   }
   
-  /* Estilos para la sección de educación */
+
   .education h2 {
-    color: #007bff;
+    color: black;
     margin-bottom: 15px;
   }
   
   .school {
-    display: flex; /* Usamos flexbox para alinear los elementos */
-    flex-direction: column; /* Alineamos los elementos en columna */
-    align-items: flex-start; /* Alineamos el texto a la izquierda */
-    border: 1px solid #ddd; /* Agregamos un borde */
-    padding: 15px; /* Agregamos padding para que el contenido no toque el borde */
-    border-radius: 5px; /* Agregamos bordes redondeados (opcional) */
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    border: 1px solid #ddd; 
+    padding: 15px;
+    border-radius: 5px;
   }
   
-  .education-grid { /* <-- Usamos la clase education-grid para el grid */
+  .education-grid { 
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas con igual ancho */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
   }
   
-  /* Estilos para la sección de habilidades */
+
   .skills { 
     border: 1px solid #ddd;
     padding: 15px;
@@ -130,11 +131,11 @@ body {
   
   .skills ul {
     text-align: left;
-    column-count: 1; /* Una columna para habilidades */ 
+    column-count: 1; 
     gap: 10px; 
   }
   
-  /* Estilos para la sección de idiomas */
+
   .languages {
     border: 1px solid #ddd;
     padding: 15px;
@@ -143,8 +144,33 @@ body {
   
   .languages ul {
     text-align: left;
-    column-count: 1; /* Una columna para idiomas */
+    column-count: 1; 
     gap: 10px;
+  }
+  
+
+  .media {
+    margin-top: 20px; 
+  }
+  
+  .media h2 {
+    color: black;
+    margin-bottom: 15px;
+  }
+  
+  .media-players {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+  }
+  
+  .media-players video, 
+  .media-players audio {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
   }
   
   @media (max-width: 768px) {
@@ -158,16 +184,20 @@ body {
       gap: 10px;
     }
     
-    .education-grid { /* <-- Usamos la clase education-grid para el grid */
-      grid-template-columns: 1fr; /* En pantallas pequeñas, una columna para educación */
+    .education-grid { 
+      grid-template-columns: 1fr; 
     }
   
     .header-content {
-      flex-direction: column; /* Foto arriba del texto en pantallas pequeñas */
+      flex-direction: column; 
       align-items: center; 
     }
   
     .header-text {
       text-align: center; 
+    }
+  
+    .media-players {
+      flex-direction: column; 
     }
   }
