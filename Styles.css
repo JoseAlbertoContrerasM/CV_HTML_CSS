@@ -4,9 +4,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-}
-
-.container {
+  }
+  
+  .container {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 20px;
@@ -15,108 +15,159 @@ body {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header {
+  }
+  
+  .header {
     text-align: center;
     padding-bottom: 20px;
     border-bottom: 2px solid #007bff; 
-}
-
-.name {
+  }
+  
+  /* Estilos para el header con la foto */
+  .header-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+  }
+  
+  .header-text {
+    text-align: left; 
+  }
+  
+  .profile-pic {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+  }
+  
+  .name {
     font-size: 2.5em;
     margin-bottom: 10px;
     color: #007bff; 
-}
-
-.contact {
+  }
+  
+  .contact {
     font-size: 1em; 
     display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-}
-
-.contact span {
+    flex-direction: column; 
+    gap: 10px; 
+  }
+  
+  .contact span {
     display: flex; 
     align-items: center; 
-}
-
-.contact i {
+  }
+  
+  .contact i {
     margin-right: 5px; 
     color: #007bff; 
-}
-
-.title {
+  }
+  
+  .title {
     font-size: 1.5em;
     font-weight: bold;
     color: #333;
     margin-top: 10px; 
-}
-
-.skills h2, .languages h2 {
+  }
+  
+  .skills h2, .languages h2 {
     color: #007bff; 
     margin-bottom: 15px; 
-}
-
-.job, .school {
+  }
+  
+  .job, .school {
     margin-bottom: 20px;
-}
-
-.company, .institution {
+  }
+  
+  .company, .institution {
     font-style: italic;
     color: #555;
-}
-
-.skills ul, .languages ul {
+  }
+  
+  .skills ul, .languages ul {
     text-align: left; 
-}
-
-.skills li, .languages li { 
+  }
+  
+  .skills li, .languages li { 
     margin-bottom: 10px;
-}
-
-.bottom-section {
+  }
+  
+  .bottom-section {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 20px;
     text-align: center; 
-}
-
-/* Estilos para la sección de educación */
-.education {
-    margin-top: 20px; 
-}
-
-.education h2 {
+  }
+  
+  /* Estilos para la sección de educación */
+  .education h2 {
     color: #007bff;
     margin-bottom: 15px;
-}
-
-.school {
+  }
+  
+  .school {
     display: flex; /* Usamos flexbox para alinear los elementos */
     flex-direction: column; /* Alineamos los elementos en columna */
     align-items: flex-start; /* Alineamos el texto a la izquierda */
-}
-
-.education {
+    border: 1px solid #ddd; /* Agregamos un borde */
+    padding: 15px; /* Agregamos padding para que el contenido no toque el borde */
+    border-radius: 5px; /* Agregamos bordes redondeados (opcional) */
+  }
+  
+  .education-grid { /* <-- Usamos la clase education-grid para el grid */
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas con igual ancho */
     gap: 20px;
-}
-
-
-@media (max-width: 768px) {
+  }
+  
+  /* Estilos para la sección de habilidades */
+  .skills { 
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .skills ul {
+    text-align: left;
+    column-count: 1; /* Una columna para habilidades */ 
+    gap: 10px; 
+  }
+  
+  /* Estilos para la sección de idiomas */
+  .languages {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .languages ul {
+    text-align: left;
+    column-count: 1; /* Una columna para idiomas */
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
     .bottom-section {
-        grid-template-columns: 1fr; 
+      grid-template-columns: 1fr; 
     }
-
+  
     .contact {
-        flex-direction: column; 
-        align-items: center;
-        gap: 10px;
+      flex-direction: column; 
+      align-items: center;
+      gap: 10px;
     }
     
-    .education {
-        grid-template-columns: 1fr;
+    .education-grid { /* <-- Usamos la clase education-grid para el grid */
+      grid-template-columns: 1fr; /* En pantallas pequeñas, una columna para educación */
     }
-}
+  
+    .header-content {
+      flex-direction: column; /* Foto arriba del texto en pantallas pequeñas */
+      align-items: center; 
+    }
+  
+    .header-text {
+      text-align: center; 
+    }
+  }
